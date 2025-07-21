@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react';
 const TextPressure = ({
   text = 'Compressa',
   fontFamily = 'Compressa VF',
-  // This font is just an example, you should not use it in commercial projects.
   fontUrl = 'https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2',
 
   width = true,
@@ -21,7 +20,6 @@ const TextPressure = ({
   className = '',
 
   minFontSize = 24,
-
 }) => {
   const containerRef = useRef(null);
   const titleRef = useRef(null);
@@ -33,15 +31,32 @@ const TextPressure = ({
   const [fontSize, setFontSize] = useState(minFontSize);
   const [scaleY, setScaleY] = useState(1);
   const [lineHeight, setLineHeight] = useState(1);
+  const [fontLoaded, setFontLoaded] = useState(false);
 
   const chars = text.split('');
 
+  // Distance function
   const dist = (a, b) => {
     const dx = b.x - a.x;
     const dy = b.y - a.y;
     return Math.sqrt(dx * dx + dy * dy);
   };
 
+  // Font load
+  useEffect(() => {
+    const font = new FontFace(fontFamily, `url(${fontUrl})`);
+    font.load()
+      .then((loadedFont) => {
+        document.fonts.add(loadedFont);
+        setFontLoaded(true);
+      })
+      .catch((err) => {
+        console.error('Font loading failed:', err);
+        setFontLoaded(true); // still render with fallback
+      });
+  }, [fontFamily, fontUrl]);
+
+  // Mouse tracking
   useEffect(() => {
     const handleMouseMove = (e) => {
       cursorRef.current.x = e.clientX;
@@ -70,11 +85,11 @@ const TextPressure = ({
     };
   }, []);
 
+  // Size calculation
   const setSize = () => {
     if (!containerRef.current || !titleRef.current) return;
 
     const { width: containerW, height: containerH } = containerRef.current.getBoundingClientRect();
-
     let newFontSize = containerW / (chars.length / 2);
     newFontSize = Math.max(newFontSize, minFontSize);
 
@@ -95,13 +110,17 @@ const TextPressure = ({
   };
 
   useEffect(() => {
+    if (!fontLoaded) return;
+
     setSize();
     window.addEventListener('resize', setSize);
     return () => window.removeEventListener('resize', setSize);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scale, text]);
+  }, [scale, text, fontLoaded]);
 
+  // Animate variation
   useEffect(() => {
+    if (!fontLoaded) return;
+
     let rafId;
     const animate = () => {
       mouseRef.current.x += (cursorRef.current.x - mouseRef.current.x) / 15;
@@ -142,7 +161,9 @@ const TextPressure = ({
 
     animate();
     return () => cancelAnimationFrame(rafId);
-  }, [width, weight, italic, alpha, chars.length]);
+  }, [width, weight, italic, alpha, chars.length, fontLoaded]);
+
+  if (!fontLoaded) return null;
 
   return (
     <div
@@ -173,8 +194,7 @@ const TextPressure = ({
 
       <h1
         ref={titleRef}
-        className={`text-pressure-title ${className} ${flex ? 'flex justify-between' : ''
-          } ${stroke ? 'stroke' : ''} uppercase text-center`}
+        className={`text-pressure-title ${className} ${flex ? 'flex justify-between' : ''} ${stroke ? 'stroke' : ''} uppercase text-center`}
         style={{
           fontFamily,
           fontSize: fontSize,

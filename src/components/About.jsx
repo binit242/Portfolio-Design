@@ -293,17 +293,18 @@ const About = () => {
       </div>
 
       {/* Left Side Text Content */}
-      <div className="absolute top-[55%] left-[5%] z-[60] text-white w-[600px]" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+      <div className="absolute top-[55%] left-[5%] z-[60] text-white w-[600px]">
         <motion.h2 
           className="text-6xl font-bold"
           variants={textSlideLeft}
+          style={{ fontFamily: 'Orbitron, sans-serif' }}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
           Education
         </motion.h2>
         <motion.p 
-          className="text-lg mt-2 font-bold"
+          className="text-2xl mt-2 font-bold  ml-10"
           variants={contentSlide}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -311,7 +312,7 @@ const About = () => {
           BCA (2022–2025) from TiiT
         </motion.p>
         <motion.p 
-          className="text-lg font-bold"
+          className="text-2xl font-bold ml-10 "
           variants={contentSlide}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -320,7 +321,7 @@ const About = () => {
           10+2 from Thakurnagar High School
         </motion.p>
         <motion.p 
-          className="text-lg font-bold"
+          className="text-2xl font-bold ml-10 "
           variants={contentSlide}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -333,14 +334,15 @@ const About = () => {
           className="text-7xl font-bold mt-12"
           variants={textSlideLeft}
           initial="hidden"
+          style={{ fontFamily: 'Orbitron, sans-serif' }}
           animate={isInView ? "visible" : "hidden"}
           transition={{ delay: 0.4 }}
         >
           Skills & Tools
         </motion.h2>
-        <div>
+        <div className="ml-10 ">
           <motion.ul 
-            className="text-lg font-bold mt-2"
+            className="text-2xl font-bold mt-2 text-black"
             variants={skillsLeft}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -350,7 +352,7 @@ const About = () => {
             <li>Web Development</li>
           </motion.ul>
           <motion.ul 
-            className="ml-48 -mt-20 font-bold text-lg"
+            className="absolute top-[290px] left-72 font-bold text-2xl text-black"
             variants={skillsRight}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
