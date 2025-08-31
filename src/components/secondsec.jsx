@@ -6,7 +6,7 @@ function Secondsec() {
          <img
   src="/FW_Plastik_39.png"
   alt="Overlay"
-  className="absolute inset-0 w-full h-full object-scale-up z-10 mix-blend-screen"
+  className="absolute inset-0 w-full h-full opacity-55 object-scale-up z-10 mix-blend-screen"
 />
 
       <TextPressure

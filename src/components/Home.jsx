@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <section
-      className="relative w-screen h-screen overflow-hidden flex items-center justify-center"
+      className="relative w-screen h-96 lg:h-screen overflow-hidden flex items-center justify-center"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -54,30 +54,36 @@ const Home = () => {
         playsInline
       />
 
-     {shine && (
-  <>
-    {/* Top row: left, center, right */}
-    <div className="absolute top-80 left-0 w-full flex justify-center items-center px-14 z-30 pointer-events-none">
-      <span className="text-white text-lg blur-in-up">©2025</span>
-    </div>
+      {shine && (
+        <>
+          {/* Top row: left, center, right */}
+          <div className="absolute top-20 md:top-80 left-0 w-full flex justify-center items-center px-4 md:px-14 z-30 pointer-events-none">
+            <span className="text-white text-sm md:text-lg blur-in-up">©2025</span>
+          </div>
 
-    {/* Bottom left */}
-    <div className="absolute bottom-52 left-48 gap-7 z-30 pointer-events-none">
-      <span className="text-white text-3xl fade-in-scale">
-        Kutu&nbsp;&nbsp;&nbsp;<i className="fa-solid fa-arrow-pointer"></i>&nbsp;&nbsp; Binit Ghosh
-      </span>
-    </div>
+          {/* Bottom left */}
+          <div className="absolute bottom-20 md:bottom-52 left-4 md:left-48 gap-3 md:gap-7 z-30 pointer-events-none">
+            <span className="text-white text-lg md:text-3xl fade-in-scale">
+              Kutu&nbsp;&nbsp;&nbsp;<i className="fa-solid fa-arrow-pointer"></i>&nbsp;&nbsp; Binit Ghosh
+            </span>
+          </div>
 
-    {/* Bottom right with line */}
-    <div className="absolute bottom-52 right-80 flex items-center z-30 pointer-events-none">
-      <span
-        className="inline-block bg-white fade-in-right"
-        style={{ height: "1px", width: "280px", marginRight: "12px" }}
-      />
-      <span className="text-white text-3xl fade-in-right">Designer & Developer</span>
-    </div>
-  </>
-)}
+          {/* Bottom right with line */}
+          <div className="absolute bottom-20 md:bottom-52 right-4 md:right-80 flex items-center z-30 pointer-events-none">
+            <span
+              className="inline-block bg-white fade-in-right"
+              style={{
+                height: "1px",
+                width: "120px",
+                marginRight: "8px",
+              }}
+            />
+            <span className="text-white text-lg md:text-3xl fade-in-right">
+              Designer & Developer
+            </span>
+          </div>
+        </>
+      )}
     </section>
   );
 };
