@@ -395,7 +395,7 @@ const About = () => {
           <motion.img 
             src={sticker3} 
             alt="sticker3" 
-            className={`absolute ${isTablet ? "bottom-[35%] right-[55%] w-60" : "bottom-[37.5%] right-[53%] w-80"} z-40 rotate-90`}
+            className={`absolute ${isTablet ? "bottom-[35%] right-[55%] w-60" : "bottom-[37.5%] right-[53%] w-80"} z-40`}
             animate={isInView ? { x: [0, -7, 18, 0] } : {}}
             transition={{ repeat: Infinity, duration: 4 }}
           />
