@@ -2,6 +2,7 @@ import Home from "./components/Home";
 import Secondsec from "./components/secondsec";
 import About from "./components/About";
 import Work from "./components/Work";
+import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import ScrollVelocity from './components/ScrollVelocity';
 
@@ -20,6 +21,7 @@ function App() {
       
       <Work/>
       {/* <ScrollVelocity text="CONTACT"/> */}
+      <Gallery />
       <Contact />
 
     </div>

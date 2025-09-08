@@ -26,14 +26,15 @@ const Contact = () => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
-      <div className="relative h-screen">
+      <div className="relative h-screen" style={{ position: 'relative', zIndex: 999 }}>
         <CurvedLoop 
           marqueeText="binitghosh326@gmail.com ✦ 7076494138 ✦ @binit._.ghosh ✦"
           speed={3}
           curveAmount={500}
           direction="right"
           interactive={true}
-          className="custom-text-style transform -translate-y-96 sca"
+          className="custom-text-style  transform -translate-y-96"
+          style={{zIndex: 9999}}
         />
        
 

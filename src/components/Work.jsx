@@ -371,7 +371,7 @@ export default function Work() {
           </div>
           
           {/* Text below the large box */}
-          <p className="text-white text-center mt-6 text-xl font-bold">
+          <p className="text-white text-center mt-6 ml-56 text-xl font-bold">
             Hover your fingers around
           </p>
         </div>
