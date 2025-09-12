@@ -1,3 +1,4 @@
+import React from 'react';
 import ScrollVelo from './ScrollVelo';
 import Folder from './Folder';
 import InfiniteMenu from './InfiniteMenu';
@@ -61,100 +62,112 @@ export default function Work() {
       {/* Mobile/Tab Layout (shown on small screens) */}
       <section className="relative pt-12 pb-24 mt-40 bento-section block lg:hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-6">
-            {/* Folder Items */}
-            <div className="h-60 flex items-center justify-center">
-              <Folder
-                size={2}
-                color="#170b00"
-                className="custom-folder"
-                label="Motion Banners"
-                thumbnails={[
-                  { src: "motion-juice.mp4", type: "video", title: "Juice Motion Banner AD" },
-                  { src: "motion-coca-cola.mp4", type: "video", title: "Coca Cola Motion Banner AD" },
-                  { src: "motion-facewash.mp4", type: "video", title: "Facewash Motion Banner AD" }
-                ]}
-              />
+          <div className="grid grid-cols-2 gap-8">
+            {/* Folder Items with improved text spacing */}
+            <div className="h-60 flex flex-col items-center justify-start pt-4">
+              <div className="mb-3">
+                <Folder
+                  size={2}
+                  color="#170b00"
+                  className="custom-folder"
+                  thumbnails={[
+                    { src: "motion-juice.mp4", type: "video", title: "Juice Motion Banner AD" },
+                    { src: "motion-coca-cola.mp4", type: "video", title: "Coca Cola Motion Banner AD" },
+                    { src: "motion-facewash.mp4", type: "video", title: "Facewash Motion Banner AD" }
+                  ]}
+                />
+              </div>
+              <p className="text-white text-center text-lg font-semibold mt-14">Motion Banners</p>
             </div>
 
-            <div className="h-60 flex items-center justify-center">
-              <Folder
-                size={2}
-                color="#170b00"
-                className="custom-folder"
-                label="Short Conversion"
-                thumbnails={[
-                  { src: "mr beast mockup.mp4", type: "video", title: "Mr Beast Podcast Short Conversion" },
-                  { src: "kobe advise mockup.mp4", type: "video", title: "Kobe Podcast Short Conversion" },
-                  { src: "ronaldo talkhead.mp4", type: "video", title: "Ronaldo Talkhead Short Conversion" }
-                ]}
-              />
+            <div className="h-60 flex flex-col items-center justify-start pt-4">
+              <div className="mb-3">
+                <Folder
+                  size={2}
+                  color="#170b00"
+                  className="custom-folder"
+                  thumbnails={[
+                    { src: "mr beast mockup.mp4", type: "video", title: "Mr Beast Podcast Short Conversion" },
+                    { src: "kobe advise mockup.mp4", type: "video", title: "Kobe Podcast Short Conversion" },
+                    { src: "ronaldo talkhead.mp4", type: "video", title: "Ronaldo Talkhead Short Conversion" }
+                  ]}
+                />
+              </div>
+              <p className="text-white text-center text-lg font-semibold mt-14">Short Conversion</p>
             </div>
 
-            <div className="h-60 flex items-center justify-center">
-              <Folder
-                size={2}
-                color="#170b00"
-                className="custom-folder"
-                label="Car Edits"
-                thumbnails={[
-                  { src: "bmw2.mp4", type: "video", title: "BMW Car Edit (GTA V)" },
-                  { src: "1969 DODGE CHARGER   THE HELLCAT X WHITE TEE  GTA V - GTA GUY (1080p, h264).mp4", type: "video", title: "1969 DODGE CHARGER - THE HELLCAT X WHITE TEE (GTA V)" },
-                  { src: "Audi R8  collide - GTA GUY (1080p, h264).mp4", type: "video", title: "Audi R8 Collide (GTA V)" }
-                ]}
-              />
+            <div className="h-60 flex flex-col items-center justify-start pt-4">
+              <div className="mb-3">
+                <Folder
+                  size={2}
+                  color="#170b00"
+                  className="custom-folder"
+                  thumbnails={[
+                    { src: "bmw2.mp4", type: "video", title: "BMW Car Edit (GTA V)" },
+                    { src: "1969 DODGE CHARGER   THE HELLCAT X WHITE TEE  GTA V - GTA GUY (1080p, h264).mp4", type: "video", title: "1969 DODGE CHARGER - THE HELLCAT X WHITE TEE (GTA V)" },
+                    { src: "Audi R8  collide - GTA GUY (1080p, h264).mp4", type: "video", title: "Audi R8 Collide (GTA V)" }
+                  ]}
+                />
+              </div>
+              <p className="text-white text-center text-lg font-semibold mt-14">Car Edits</p>
             </div>
 
-            <div className="h-60 flex items-center justify-center">
-              <Folder
-                size={2}
-                color="#170b00"
-                className="custom-folder"
-                label="Showreels"
-                thumbnails={[
-                  { src: "editor showreel 2023.mp4", type: "video", title: "Editor Showreel 2023" },
-                  { src: "podcast showreel 2024.mp4", type: "video", title: "Podcast Showreel 2024" },
-                  { src: "Video Editing Showreel  Portfolio - abdystudio (1080p, h264)_1.mp4", type: "video", title: "Video Editing Showreel 2025" }
-                ]}
-              />
+            <div className="h-60 flex flex-col items-center justify-start pt-4">
+              <div className="mb-3">
+                <Folder
+                  size={2}
+                  color="#170b00"
+                  className="custom-folder"
+                  thumbnails={[
+                    { src: "editor showreel 2023.mp4", type: "video", title: "Editor Showreel 2023" },
+                    { src: "podcast showreel 2024.mp4", type: "video", title: "Podcast Showreel 2024" },
+                    { src: "Video Editing Showreel  Portfolio - abdystudio (1080p, h264)_1.mp4", type: "video", title: "Video Editing Showreel 2025" }
+                  ]}
+                />
+              </div>
+              <p className="text-white text-center text-lg font-semibold mt-14">Showreels</p>
             </div>
 
-            <div className="h-60 flex items-center justify-center">
-              <Folder
-                size={2}
-                color="#170b00"
-                className="custom-folder"
-                label="Gaming Thumbnails"
-                thumbnails={[
-                  { src: "Neon thumbnail bg-13411156.jpg", type: "image", title: "Valorant Neon Thumbnail" },
-                  { src: "VALORANT THUMBNAIL.jpg", type: "image", title: "Valorant neon Thumbnail 3" },
-                  { src: "neonsss copy.jpg", type: "image", title: "Valorant Neon Thumbnail 2" }
-                ]}
-              />
+            <div className="h-60 flex flex-col items-center justify-start pt-4">
+              <div className="mb-3">
+                <Folder
+                  size={2}
+                  color="#170b00"
+                  className="custom-folder"
+                  thumbnails={[
+                    { src: "Neon thumbnail bg-13411156.jpg", type: "image", title: "Valorant Neon Thumbnail" },
+                    { src: "VALORANT THUMBNAIL.jpg", type: "image", title: "Valorant neon Thumbnail 3" },
+                    { src: "neonsss copy.jpg", type: "image", title: "Valorant Neon Thumbnail 2" }
+                  ]}
+                />
+              </div>
+              <p className="text-white text-center text-lg font-semibold mt-14">Gaming Thumbnails</p>
             </div>
 
-            <div className="h-60 flex items-center justify-center">
-              <Folder
-                size={2}
-                color="#170b00"
-                className="custom-folder"
-                label="Gaming Montages"
-                thumbnails={[
-                  { src: "valorant montage 1.mp4", type: "video", title: "Valorant Montage 1 kendrick lamar" },
-                  { src: "𝙂𝙖𝙩𝙖 𝙊𝙣𝙡𝙮 🤍 - VALORANT [Edit_Montage] - 7Tech (1080p, h264).mp4", type: "video", title: "Gata Only Valorant Edit Montage 2" },
-                  { src: "Levitating-Valorant edit  GTA GUY - GTA GUY (1080p, h264).mp4", type: "video", title: "Levitating Valorant Edit Montage 3" }
-                ]}
-              />
+            <div className="h-60 flex flex-col items-center justify-start pt-4">
+              <div className="mb-3">
+                <Folder
+                  size={2}
+                  color="#170b00"
+                  className="custom-folder"
+                  thumbnails={[
+                    { src: "valorant montage 1.mp4", type: "video", title: "Valorant Montage 1 kendrick lamar" },
+                    { src: "𝙂𝙖𝙩𝙖 𝙊𝙣𝙡𝙮 🤍 - VALORANT [Edit_Montage] - 7Tech (1080p, h264).mp4", type: "video", title: "Gata Only Valorant Edit Montage 2" },
+                    { src: "Levitating-Valorant edit  GTA GUY - GTA GUY (1080p, h264).mp4", type: "video", title: "Levitating Valorant Edit Montage 3" }
+                  ]}
+                />
+              </div>
+              <p className="text-white text-center text-lg font-semibold mt-14">Gaming Montages</p>
             </div>
           </div>
 
           {/* Large Box */}
-          <div className="mt-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden flex items-center justify-center ring-1 ring-white/5">
+          <div className="mt-12 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden flex items-center justify-center ring-1 ring-white/5">
             <InfiniteMenu items={items} />
           </div>
 
           {/* Text below the large box */}
-          <p className="text-white text-center mt-6 text-xl font-bold">
+          <p className="text-white text-center mt-10 text-2xl font-bold">
             Hover your fingers around
           </p>
         </div>
@@ -166,7 +179,7 @@ export default function Work() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
             {/* Item 1 (Top Left) */}
-            <div className="lg:col-start-1 lg:row-start-1 h-60 flex items-center justify-center">
+            <div className="lg:col-start-1 lg:row-start-1 h-60 flex flex-col items-center justify-center">
               <div style={{ 
                 height: '120px', 
                 position: 'relative',
@@ -176,7 +189,6 @@ export default function Work() {
                   size={2}
                   color="#170b00"
                   className="custom-folder"
-                  label="Motion Banners"
                   thumbnails={[
                     { 
                       src: "motion-juice.mp4", 
@@ -196,10 +208,11 @@ export default function Work() {
                   ]}
                 />
               </div>
+              <p className="text-white text-center text-lg font-semibold mt-14">Motion Banners</p>
             </div>
 
             {/* Item 2 (Mid Left) */}
-            <div className="lg:col-start-1 lg:row-start-2 h-60 flex items-center justify-center">
+            <div className="lg:col-start-1 lg:row-start-2 h-60 flex flex-col items-center justify-center">
               <div style={{ 
                 height: '120px', 
                 position: 'relative',
@@ -209,7 +222,6 @@ export default function Work() {
                   size={2}
                   color="#170b00"
                   className="custom-folder"
-                  label="Short Conversion"
                   thumbnails={[
                     { 
                       src: "mr beast mockup.mp4", 
@@ -229,10 +241,11 @@ export default function Work() {
                   ]}
                 />
               </div>
+              <p className="text-white text-center text-lg font-semibold mt-14">Short Conversion</p>
             </div>
             
             {/* Item 3 (Bottom Left) */}
-            <div className="lg:col-start-1 lg:row-start-3 h-60 flex items-center justify-center">
+            <div className="lg:col-start-1 lg:row-start-3 h-60 flex flex-col items-center justify-center">
               <div style={{ 
                 height: '120px', 
                 position: 'relative',
@@ -242,7 +255,6 @@ export default function Work() {
                   size={2}
                   color="#170b00"
                   className="custom-folder"
-                  label="Car Edits"
                   thumbnails={[
                     { 
                       src: "bmw2.mp4", 
@@ -262,10 +274,11 @@ export default function Work() {
                   ]}
                 />
               </div>
+              <p className="text-white text-center text-lg font-semibold mt-14">Car Edits</p>
             </div>
 
             {/* Item 4 (Top Mid-Left) */}
-            <div className="lg:col-start-2 lg:row-start-1 h-60 flex items-center justify-center">
+            <div className="lg:col-start-2 lg:row-start-1 h-60 flex flex-col items-center justify-center">
               <div style={{ 
                 height: '120px', 
                 position: 'relative',
@@ -275,7 +288,6 @@ export default function Work() {
                   size={2}
                   color="#170b00"
                   className="custom-folder"
-                  label="Showreels"
                   thumbnails={[
                     { 
                       src: "editor showreel 2023.mp4", 
@@ -295,10 +307,11 @@ export default function Work() {
                   ]}
                 />
               </div>
+              <p className="text-white text-center text-lg font-semibold mt-14">Showreels</p>
             </div>
 
             {/* Item 5 (Top Mid-Right) */}
-            <div className="lg:col-start-3 lg:row-start-1 h-60 flex items-center justify-center">
+            <div className="lg:col-start-3 lg:row-start-1 h-60 flex flex-col items-center justify-center">
               <div style={{ 
                 height: '120px', 
                 position: 'relative',
@@ -308,7 +321,6 @@ export default function Work() {
                   size={2}
                   color="#170b00"
                   className="custom-folder"
-                  label="Gaming Thumbnails"
                   thumbnails={[
                     { 
                       src: "Neon thumbnail bg-13411156.jpg", 
@@ -328,10 +340,11 @@ export default function Work() {
                   ]}
                 />
               </div>
+              <p className="text-white text-center text-lg font-semibold mt-14">Gaming Thumbnails</p>
             </div>
 
             {/* Item 6 (Top Right) */}
-            <div className="lg:col-start-4 lg:row-start-1 h-60 flex items-center justify-center">
+            <div className="lg:col-start-4 lg:row-start-1 h-60 flex flex-col items-center justify-center">
               <div style={{ 
                 height: '120px', 
                 position: 'relative',
@@ -341,7 +354,6 @@ export default function Work() {
                   size={2}
                   color="#170b00"
                   className="custom-folder"
-                  label="Gaming Montages"
                   thumbnails={[
                     { 
                       src: "valorant montage 1.mp4", 
@@ -361,6 +373,7 @@ export default function Work() {
                   ]}
                 />
               </div>
+              <p className="text-white text-center text-lg font-semibold mt-14">Gaming Montages</p>
             </div>
             
             {/* Item 7 (Large Box) - Now correctly spans 2 rows and 3 columns */}
@@ -370,8 +383,8 @@ export default function Work() {
 
           </div>
           
-          {/* Text below the large box */}
-          <p className="text-white text-center mt-6 ml-56 text-xl font-bold">
+          {/* Text below the large box - Increased top margin for PC only */}
+          <p className="text-white text-center mt-16 ml-56 text-2xl font-bold lg:mt-24">
             Hover your fingers around
           </p>
         </div>

@@ -14,9 +14,6 @@ const items = [
   { icon: <FaGithub size={18} />, label: 'GitHub', onClick: () => window.open('https://github.com/binit242') },
 ];
 
-
-
-
 const Contact = () => {
   return (
     <div className="min-h-screen bg-cover bg-center relative"
@@ -52,8 +49,8 @@ const Contact = () => {
         <ASCIIText
             text='THANK YOU'
             enableWaves={true}
-            asciiFontSize={5}  // Extreme size
-            className="origin-bottom"
+            asciiFontSize={2}  // Extreme size
+            className="origin-bottom md:scale-100 scale-50"
             style={{
               fontSize: '25rem',  // Massive font size
               lineHeight: '1',

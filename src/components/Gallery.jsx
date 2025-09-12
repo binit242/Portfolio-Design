@@ -27,14 +27,14 @@ const InfiniteVideoGallery = () => {
     const localVideos = [
       {
         id: 1,
-        src: '/GALLERY/1.1.mp4',
-        thumbnail: '/GALLERY/1.png',
+        src: '/GALLERY/Sequence 01.mp4',
+        thumbnail: '/GALLERY/19.png',
         title: 'Video 1'
       },
       {
         id: 2,
-        src: '/GALLERY/2.1.mp4',
-        thumbnail: '/GALLERY/2.png',
+        src: '/GALLERY/kai cenat.mp4',
+        thumbnail: '/GALLERY/17.png',
         title: 'Video 2'
       },
       {
@@ -45,8 +45,8 @@ const InfiniteVideoGallery = () => {
       },
       {
         id: 4,
-        src: '/GALLERY/6.mp4',
-        thumbnail: '/GALLERY/4.png',
+        src: '/GALLERY/Sequence 01.mp4',
+        thumbnail: '/GALLERY/19.png',
         title: 'Video 4'
       },
       {
@@ -123,8 +123,8 @@ const InfiniteVideoGallery = () => {
       },
       {
         id: 17,
-        src: '/GALLERY/kai cenat.mp4',
-        thumbnail: '/GALLERY/17.png',
+        src: '/GALLERY/2.1.mp4',
+        thumbnail: '/GALLERY/2.png',
         title: 'Video 17'
       },
       {
@@ -135,14 +135,14 @@ const InfiniteVideoGallery = () => {
       },
       {
         id: 19,
-        src: '/GALLERY/Sequence 01.mp4',
-        thumbnail: '/GALLERY/19.png',
+        src: '/GALLERY/6.mp4',
+        thumbnail: '/GALLERY/4.png',
         title: 'Video 19'
       },
       {
         id: 20,
-        src: '/GALLERY/tahnks.mp4',
-        thumbnail: '/GALLERY/20.png',
+       src: '/GALLERY/1.1.mp4',
+        thumbnail: '/GALLERY/1.png',
         title: 'Video 20'
       }
     ];
