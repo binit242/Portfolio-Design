@@ -4,6 +4,7 @@ import About from "./components/About";
 import Work from "./components/Work";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
+import Comments from "./components/Comments";
 import ScrollVelocity from './components/ScrollVelocity';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Work/>
       {/* <ScrollVelocity text="CONTACT"/> */}
       <Gallery />
+      <Comments/>
       <Contact />
 
     </div>
